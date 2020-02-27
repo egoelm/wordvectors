@@ -169,7 +169,7 @@ def build_corpus():
                 continue  # it's okay as we have a pretty big corpus!
             elem.clear()  # We need to save memory!
             if i % 1000 == 0:
-                print(i),
+                #print(i),
                 fsize = os.path.getsize("data/{}.txt".format(lcode))
                 if fsize > max_corpus_size:
                     break

@@ -63,7 +63,8 @@ def make_wordvectors():
             sents.append(words)
 
     print("Making word vectors...")
-    min_count = get_min_count(sents)
+    #min_count = get_min_count(sents)
+    min_count = 1
     model = gensim.models.Word2Vec(sents, size=vector_size, min_count=min_count,
                                    negative=num_negative,
                                    window=window_size)
@@ -72,7 +73,7 @@ def make_wordvectors():
 
     # Save to file
     with codecs.open('data/{}.tsv'.format(lcode), 'w', 'utf-8') as fout:
-        for i, word in enumerate(model.index2word):
+        for i, word in enumerate(model.wv.index2word):
             fout.write(u"{}\t{}\t{}\n".format(str(i), word.encode('utf8').decode('utf8'),
                                               np.array_str(model[word])
                                               ))

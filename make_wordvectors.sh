@@ -10,8 +10,8 @@ vocab_size=20000 # the maximum vocabulary size
 num_negative=5 # the int for negative specifies how many “noise words” should be drawn
 ############## END #####################
 
-echo "step 0. Make 'data' directory and move there."
-mkdir data; cd data
+#echo "step 0. Make 'data' directory and move there."
+#mkdir data; cd data
 
 #echo "step 1. Download the stored wikipedia file to your disk."
 #wget "https://dumps.wikimedia.org/${lcode}wiki/20200201/${lcode}wiki-20200201-pages-articles-multistream.xml.bz2"
@@ -19,7 +19,7 @@ mkdir data; cd data
 #echo "step 2. Extract the bz2 file."
 #bzip2 -d "${lcode}wiki-20200201-pages-articles-multistream.xml.bz2"
 
-cd ..
+#cd ..
 #echo "step 3. Build Corpus."
 #python build_corpus.py --lcode=${lcode} --max_corpus_size=${max_corpus_size}
 
