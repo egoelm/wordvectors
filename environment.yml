@@ -1,0 +1,15 @@
+name: exjobb
+channels:
+  - defaults
+dependencies:
+  - scrapy
+  - python=3.8
+  - pylint
+  - pandas
+  - nltk
+  - scikit-learn
+  - matplotlib
+  - regex
+  - python-wget
+prefix: /Users/emiliaelm/opt/anaconda3/envs/exjobb
+
